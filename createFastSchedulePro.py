@@ -98,7 +98,7 @@ class MyTestCase( unittest.TestCase ):
             # 输入车牌号
             self.driver.find_element_by_id( "com.yihu001.kon.manager:id/truck_no" ).send_keys( truckNo )
             # 输入司机手机
-            self.driver.find_element_by_id( "com.yihu001.kon.manager:id/tv_enterprise_type" ).send_keys( driverContact )
+            self.driver.find_element_by_id( "com.yihu001.kon.manager:id/et_driver_mobile" ).send_keys( driverContact )
             # 输入司机姓名
             self.driver.find_element_by_id( "com.yihu001.kon.manager:id/name" ).send_keys( driverName )
             #完成
