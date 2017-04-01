@@ -2,6 +2,8 @@ import unittest
 import loginPro, logoutPro
 import createTaskPro
 import createSchedulePro
+import createTaskDeliveryPro
+import createTaskDispatchPro
 
 
 # mysuite = unittest.TestSuite()
@@ -11,16 +13,20 @@ import createSchedulePro
 
 
 # 执行登录
-logincases = unittest.TestLoader().loadTestsFromTestCase(loginPro.MyTestCase )
+logincases = unittest.TestLoader().loadTestsFromTestCase(loginPro.MyTestCase)
 '''业务'''
 # 执行创建任务
-createTaskcases = unittest.TestLoader().loadTestsFromTestCase(createTaskPro.MyTestCase )
+createTaskcases = unittest.TestLoader().loadTestsFromTestCase(createTaskPro.MyTestCase)
 # 执行创建调度
-createDeliverycases = unittest.TestLoader().loadTestsFromTestCase(createSchedulePro.MyTestCase )
+createSchedulecases = unittest.TestLoader().loadTestsFromTestCase(createSchedulePro.MyTestCase)
+# 执行创建任务并调度
+createTaskDispatchcases = unittest.TestLoader().loadTestsFromTestCase(createTaskDispatchPro.MyTestCase)
+# 执行创建任务并发送
+createTaskDeliverycases = unittest.TestLoader().loadTestsFromTestCase(createTaskDeliveryPro.MyTestCase)
 # 注销
-logutcases = unittest.TestLoader().loadTestsFromTestCase(logoutPro.MyTestCase )
+logutcases = unittest.TestLoader().loadTestsFromTestCase(logoutPro.MyTestCase)
 
-mysuite = unittest.TestSuite([logincases, createTaskcases, createDeliverycases, logutcases])
+mysuite = unittest.TestSuite([logincases, createTaskcases, createSchedulecases, createTaskDeliverycases, logutcases])
 
 # mysuite.addTest(unittestdemo.MyTestCase("testLogIn"))
 # mysuite.addTest(pickup.MyTestCase("testPickup"))
