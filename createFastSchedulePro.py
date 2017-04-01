@@ -104,8 +104,6 @@ class MyTestCase( unittest.TestCase ):
             #完成
             self.driver.find_element_by_id( "com.yihu001.kon.manager:id/submit" ).click()
 
-            # 调度提示图
-            self.driver.get_screenshot_as_file( "dispatch.png" )
 
         except Exception as e:
             print( "失败了呢" )
