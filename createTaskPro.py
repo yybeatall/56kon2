@@ -6,23 +6,14 @@ from time import sleep
 
 from business import createTask
 from business import changeBusiness
+from method import setParam
 
 from appium import webdriver
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        #天天模拟器
-        desired_caps = {}
-        desired_caps['platformName'] = 'Android'
-        desired_caps['platformVersion'] = '4.4.4'
-        desired_caps['deviceName'] = '127.0.0.1:6555'
-        desired_caps['appPackage'] = 'com.yihu001.kon.manager'
-        desired_caps['appActivity'] = '.activity.HomeActivity'
-        desired_caps["unicodeKeyboard"] = "True"
-        desired_caps["resetKeyboard"] = "True"
-        #desired_caps["automationName"] = "Selendroid"
-        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+        setParam.setParam(self)
 
     def testCreateTask(self):
         try:
