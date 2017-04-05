@@ -13,7 +13,7 @@ from method import setParam
 @ddt
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
 
     mobile = commonMethod.mobileNo("139")
 

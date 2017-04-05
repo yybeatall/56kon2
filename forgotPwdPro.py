@@ -11,7 +11,7 @@ from ddt import ddt, data, unpack
 @ddt
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
 
 
     @data(("13940914601", "123456"))

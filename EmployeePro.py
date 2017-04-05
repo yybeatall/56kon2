@@ -11,7 +11,7 @@ from appium import webdriver
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
 
     def testEmployee(self):
         employee = "13900000404"

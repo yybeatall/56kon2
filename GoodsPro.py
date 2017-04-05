@@ -9,7 +9,7 @@ from business import changeBusiness
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
 
     def testGoods(self):
         goodsName = "每日货物"

@@ -12,7 +12,7 @@ from appium import webdriver
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
 
     def testCreateTaskDispatch(self):
         try:

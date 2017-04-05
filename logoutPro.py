@@ -9,7 +9,7 @@ from method import setParam
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        setParam.setParam(self)
+        self.driver = setParam.setParam(self)
     def testLogout(self):
         #点击我的
         self.driver.find_elements_by_id("com.yihu001.kon.manager:id/bottom_navigation_container")[3].click()

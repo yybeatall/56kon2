@@ -18,3 +18,5 @@ def setParam(self):
     desired_caps["resetKeyboard"] = "True"
     # desired_caps["automationName"] = "Selendroid"
     self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+
+    return self.driver
