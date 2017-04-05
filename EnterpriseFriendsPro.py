@@ -11,7 +11,7 @@ class MyTestCase( unittest.TestCase ):
     def setUp(self):
         setParam.setParam(self)
 
-    def testAddEnterpriseFriends(self):
+    def testEnterpriseFriends(self):
         enterpriseNo = "test8"
         try:
             sleep(3)

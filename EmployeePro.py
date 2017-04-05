@@ -13,7 +13,7 @@ class MyTestCase( unittest.TestCase ):
     def setUp(self):
         setParam.setParam(self)
 
-    def testAddEmployee(self):
+    def testEmployee(self):
         employee = "13900000404"
         try:
             sleep(3)
