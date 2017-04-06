@@ -4,13 +4,13 @@
 import unittest
 import random
 from time import sleep
-from method import setParam
-from business import changeBusiness
+from method import setParam56kon
+from method56kon import changeBusiness
 
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
 
     def testGoods(self):
         goodsName = "每日货物"+str(random.randint(0, 9))+str(random.randint(0, 9))

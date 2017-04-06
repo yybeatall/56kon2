@@ -3,14 +3,14 @@
 # 综合测试--登录
 import unittest
 from time import sleep
-from method import setParam
+from method import setParam56kon
 from appium import webdriver
 from ddt import ddt, data, unpack
 
 @ddt
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
 
     @data(("13940914601", "123456"))
     @unpack

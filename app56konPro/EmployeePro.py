@@ -3,15 +3,15 @@
 # 综合版测试--添加员工
 import unittest
 from time import sleep
-from method import setParam
-from business import changeBusiness
+from method import setParam56kon
+from method56kon import changeBusiness
 
 from appium import webdriver
 
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
 
     def testEmployee(self):
         employee = "13900000404"

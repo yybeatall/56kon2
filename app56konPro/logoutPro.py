@@ -4,12 +4,12 @@
 import unittest
 from time import sleep
 
-from method import setParam
+from method import setParam56kon
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
     def testLogout(self):
         #点击我的
         self.driver.find_elements_by_id("com.yihu001.kon.manager:id/bottom_navigation_container")[3].click()

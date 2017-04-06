@@ -3,13 +3,13 @@
 # 综合版测试--添加企业好友
 import unittest
 from time import sleep
-from method import setParam
-from business import changeBusiness
+from method import setParam56kon
+from method56kon import changeBusiness
 
 
 class MyTestCase( unittest.TestCase ):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
 
     def testEnterpriseFriends(self):
         enterpriseNo = "test8"

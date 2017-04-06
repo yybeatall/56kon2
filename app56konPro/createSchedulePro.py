@@ -3,16 +3,16 @@
 #综合版测试--创建调度
 import unittest
 from time import sleep
-from business import createschedule
-from business import changeBusiness
-from method import setParam
+from method56kon import createschedule
+from method56kon import changeBusiness
+from method import setParam56kon
 
 from appium import webdriver
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = setParam.setParam(self)
+        self.driver = setParam56kon.setParam( self )
 
     def testCreateSchedule(self):
         try:
