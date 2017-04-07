@@ -4,15 +4,15 @@ from time import sleep
 def taskInfo(self, status):
 
     #任务详情
-    self.driver.find_element_by_xpath( '//android.widget.TextView[contains(@text,"显示更多信息")]' )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/more_layout" ).click( )
 
     e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/package_material_key" )
     e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/task_no_key" )
-    self.driver.scroll( e1, e2 )
+    self.driver.drag_and_drop( e1, e2 )
 
     e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/goods_quantity_key" )
     e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/package_type_key" )
-    self.driver.scroll( e1, e2 )
+    self.driver.drag_and_drop( e1, e2 )
 
     # 提货地址地图页
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/pickup_addr_image" ).click( )
@@ -31,7 +31,7 @@ def taskInfo(self, status):
 
     e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/pickup_time_key" )
     e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/goods_quantity_key" )
-    self.driver.scroll( e1, e2 )
+    self.driver.drag_and_drop( e1, e2 )
 
     # 执行交接
     if status == "pickup":
@@ -58,12 +58,6 @@ def taskInfo(self, status):
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "dispatchInfo.png" )
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/schedule_icon" ).click( )
-    sleep( 2 )
-    # 截图
-    self.driver.get_screenshot_as_file( "contactsInfo2.png" )
-    # 返回
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_back" ).click( )
 
     '''照片详情'''
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="照片"]' ).click( )
@@ -76,3 +70,6 @@ def taskInfo(self, status):
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "checkInfo.png" )
+
+    #返回
+    self.driver.find_element_by_id("android.widget.ImageButton").click()
