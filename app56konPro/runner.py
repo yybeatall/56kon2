@@ -27,7 +27,7 @@ createTaskDeliverycases = unittest.TestLoader().loadTestsFromTestCase( createTas
 # 注销
 logutcases = unittest.TestLoader().loadTestsFromTestCase( logoutPro.MyTestCase )
 
-mysuite = unittest.TestSuite([logincases, createTaskcases, createSchedulecases, createTaskDeliverycases, logutcases])
+mysuite = unittest.TestSuite([createTaskDispatchcases, createTaskDispatchcases, createTaskDispatchcases])
 
 # mysuite.addTest(unittestdemo.MyTestCase("testLogIn"))
 # mysuite.addTest(pickup.MyTestCase("testPickup"))
