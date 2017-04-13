@@ -1,4 +1,5 @@
 from time import sleep
+from method import commonMethod
 
 
 def taskInfo(self, status):
@@ -34,8 +35,9 @@ def taskInfo(self, status):
     self.driver.drag_and_drop( e1, e2 )
 
     # 执行交接
-    if status == "pickup":
-        self.driver.find_element_by_xpath( '//android.widget.TextView[contains(@text,"执行交接")]' )
+    if commonMethod.isElement(self,"xpath",'//android.widget.TextView[contains(@text,"执行交接")]') and status == "pickup":
+        self.driver.find_element_by_xpath( '//android.widget.TextView[contains(@text,"执行交接")]' ).click()
+        self.driver.find_element_by_id( "com.yihu001.kon.driver:id/handover" ).click( )
 
     # 到货地址地图页
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/delivery_addr_image" ).click( )
@@ -53,6 +55,10 @@ def taskInfo(self, status):
     # 返回
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_back" ).click( )
 
+    if commonMethod.isElement(self,"xpath",'//android.widget.TextView[contains(@text,"执行交接")]') and status == "delivery":
+        self.driver.find_element_by_xpath( '//android.widget.TextView[contains(@text,"执行交接")]' ).click()
+        self.driver.find_element_by_id( "com.yihu001.kon.driver:id/handover" ).click( )
+
     '''调度详情'''
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="调度"]' ).click( )
     sleep( 2 )
@@ -67,9 +73,8 @@ def taskInfo(self, status):
 
     '''定检详情'''
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="定检"]' ).click( )
-    sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "checkInfo.png" )
 
     #返回
-    self.driver.find_element_by_id("android.widget.ImageButton").click()
+    self.driver.find_element_by_class_name("android.widget.ImageButton").click()

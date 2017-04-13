@@ -1,5 +1,6 @@
 #共享货跟
 def shareToContacts(self):
+    #联系人
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_one" ).click( )
     self.driver.find_element_by_xpath(
         '//android.widget.RelativeLayout/android.support.v7.widget.RecyclerView/android.widget'
