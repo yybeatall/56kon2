@@ -1,4 +1,7 @@
 #共享货跟
+from time import sleep
+
+
 def shareToContacts(self):
     #联系人
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_one" ).click( )
@@ -13,6 +16,7 @@ def shareToContacts(self):
 def shareToGroup(self):
     # 分组
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_two" ).click( )
+    sleep(3)
     self.driver.find_element_by_xpath(
         '//android.widget.RelativeLayout[contains(@index,0)]' ).click( )
     self.driver.find_element_by_xpath(

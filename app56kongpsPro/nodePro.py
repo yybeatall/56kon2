@@ -33,23 +33,24 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_class_name("android.widget.LinearLayout").click()
 
             '''菜单操作项'''
-            #任务详情
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
-            taskInfo.taskInfo(self,'')
-            print( "任务详情" )
-
-            #运输轨迹
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_track").click()
-            trackInfo.trackInfo(self)
-            print("运输轨迹")
+            # #任务详情
+            # self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
+            # taskInfo.taskInfo(self,'')
+            # print( "任务详情" )
+            #
+            # #运输轨迹
+            # self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_track").click()
+            # trackInfo.trackInfo(self)
+            # print("运输轨迹")
 
             #执行定检
             #扫码交接未实现
             #只实现两次滑动
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_event").click()
             #上传照片
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_upload")[0].click()
+            self.driver.find_elements_by_id("com.yihu001.kon.driver:id/btn_upload")[0].click()
             uploadPic.uploadPic(self)
+            print("上传照片")
 
             #执行定检
             list = self.driver.find_elements_by_id("com.yihu001.kon.driver:id/btn_execute")
@@ -69,6 +70,12 @@ class MyTestCase(unittest.TestCase):
 
                     elif commonMethod.isElement(self,"id","com.yihu001.kon.driver:id/handover"):
                         self.driver.find_element_by_id( "com.yihu001.kon.driver:id/handover" ).click()
+
+                    else:
+                        #需要扫码交接的暂不处理
+                        self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_back").click()
+                        self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
+                        break
                     i = i + 1
             else:
                 e1 = self.driver.find_elements_by_id("com.yihu001.kon.driver:id/btn_upload")[1]
@@ -91,8 +98,10 @@ class MyTestCase(unittest.TestCase):
                         elif commonMethod.isElement( self, "id", "com.yihu001.kon.driver:id/handover" ):
                             self.driver.find_element_by_id( "com.yihu001.kon.driver:id/handover" ).click( )
                         i = i + 1
-            print( "执行定检" )
+                else:
+                    self.driver.find_element_by_class_name("android.widget.ImageButton").click()
 
+            print( "执行定检" )
 
             #共享货跟
             #只选了一种共享方式--联系人

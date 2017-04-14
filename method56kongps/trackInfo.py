@@ -1,3 +1,5 @@
+from time import sleep
+
 from method56kongps import share
 def trackInfo(self):
     #数据切换
@@ -5,6 +7,7 @@ def trackInfo(self):
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/rl_net").click()
     #刷新
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_refresh").click()
+    sleep(3)
     #menu
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_expand_menu_button").click()
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_detail").click()

@@ -38,7 +38,7 @@ def uploadPic(self):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_ok" ).click( )
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_upload" ).click( )
     sleep( 6 )
-    self.driver.find_element_by_id("android.widget.ImageButton").click()
+    self.driver.find_element_by_class_name("android.widget.ImageButton").click()
 
 #def uploadTake(self):
     # 拍照
