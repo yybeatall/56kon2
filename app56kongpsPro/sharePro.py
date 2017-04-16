@@ -17,8 +17,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def testShare(self):
-        plateNo = "辽A12345"
-        reportPhone = "13940914601"
+        sharePhone = "13940914601"
         try:
             '''从首页我的共享按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_share").click()
@@ -93,7 +92,7 @@ class MyTestCase(unittest.TestCase):
 
             #手机号码
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_three").click()
-            self.driver.find_element_by_id( "com.yihu001.kon.driver:id/et_phone" ).send_keys( reportPhone )
+            self.driver.find_element_by_id( "com.yihu001.kon.driver:id/et_phone" ).send_keys( sharePhone )
             self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_menu" ).click( )
 
             # 添加共享对象
