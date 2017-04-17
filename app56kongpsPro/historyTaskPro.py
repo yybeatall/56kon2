@@ -1,6 +1,6 @@
 # usr/bin/python
 # encoding:utf-8
-# 足迹版测试--我的共享流程测试
+# 足迹版测试--历史任务流程测试
 import unittest
 from time import sleep
 from method56kongps import pickupDelivery
@@ -10,6 +10,7 @@ from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
 from method56kongps import share
+from method56kongps import node
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
@@ -17,10 +18,9 @@ class MyTestCase(unittest.TestCase):
 
 
     def testHistoryTask(self):
-        plateNo = "辽A12345"
-        reportPhone = "13940914601"
+
         try:
-            '''从首页我的共享按钮进入'''
+            '''从首页历史任务按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_history").click()
             sleep(3)
 
@@ -49,12 +49,11 @@ class MyTestCase(unittest.TestCase):
             #上传照片
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_picture").click()
             uploadPic.uploadPicFirst(self,3)
-
-
+            self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
 
             #执行定检
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_event").click()
-
+            node.node(self)
 
             #共享货跟
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_share").click()
