@@ -25,8 +25,8 @@ class MyTestCase(unittest.TestCase):
             sleep(3)
 
             #调度单号筛选
-            self.driver.find_element_by_xpath('//android.widget.RelativeLayout[contains(@text,"调度单号")]').click()
-            self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[1].click()
+            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_scno").click()
+            self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[4].click()
             sleep(3)
 
             #联系人信息
@@ -52,8 +52,9 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
 
             #执行定检
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_event").click()
-            node.node(self)
+            if commonMethod.isElement(self,"id","com.yihu001.kon.driver:id/tv_task_event"):
+                self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_event").click()
+                node.node(self)
 
             #共享货跟
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_share").click()
