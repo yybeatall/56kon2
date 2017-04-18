@@ -48,7 +48,7 @@ class MyTestCase(unittest.TestCase):
 
             #上传照片
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_picture").click()
-            uploadPic.uploadPicFirst(self,3)
+            uploadPic.uploadPicFirst(self)
             self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
 
             #执行定检

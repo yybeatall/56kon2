@@ -1,14 +1,19 @@
 from time import sleep
 
 
-def uploadPicFirst(self,n):
+def uploadPicFirst(self):
     i = 0
-    self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/iv_add_pic_b" )[0].click( )
-    cancel( self )
-    while (i < n):
+    list = self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/iv_add_pic_b" )
+    count = len(list)
+    if count > 0:
         self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/iv_add_pic_b" )[0].click( )
-        i = i + 1
-        uploadPic( self )
+        cancel( self )
+        while (i < count):
+            self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/iv_add_pic_b" )[0].click( )
+            i = i + 1
+            uploadPic( self )
+    else:
+        uploadpicAgain(self,3)
 
 
 def uploadpicAgain(self,n):
