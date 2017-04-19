@@ -7,7 +7,7 @@ import requests
 
 
 def testPost(self):
-   orderno = time.strftime('%Y%m%d%X' ,time.localtime()).split(':')
+   orderno = ''.join(time.strftime('%Y%m%d%X' ,time.localtime()).split(':'))
    memo = "我是备注啊"
    latitude = '31.23577592339'
    longitude = '121.41764361893'
@@ -29,7 +29,7 @@ def testPost(self):
    'X-Requested-With':'XMLHttpRequest',
    'Referer':'https://api.56come.cn/proxy.html?r04181011',
    'Content-Length': '1069',
-   'Cookie':'Hm_lvt_01d0eb3aac496cdccf683c3ed0c10aff=1468463586,1468896676,1468993393,1469088919; AccessToken=qFmrbUBh7F9FyErAfu9po8OkI5gjs6PB6pP3ZRoX; _gat=1; _ga=GA1.2.1163943480.1489752384; KONAPISID=eyJpdiI6IkQ4K2xjXC9ZbGhEUjN3eWFFV0paSDV3PT0iLCJ2YWx1ZSI6IlBPZXNMNjRCczhySmhyODNySnlGRUhnaVZ5U2FRWFJKMmpXRWZmUnplRkI3NkRKdGp5QkxxK2ZvdWJKdzNTOXBvZGp1ODlxcElcL3ZSTDNHc2NBTExEdz09IiwibWFjIjoiYmMxNTY2YTgwODM4NWFhOGMzNTlmZTg2ODFhMWEyZjk0ZmMxY2YzYmM0MDY0NTAzYmUyOTY3ZmM5MmFkMTAwOCJ9; KONAPISID=7d038c0d11f318c49dd93c38fe6252ca193e161f',
+   'Cookie':'Hm_lvt_01d0eb3aac496cdccf683c3ed0c10aff=1468463586,1468896676,1468993393,1469088919; AccessToken=Nh9AthMVuDnFQpvaVdxu5BS166aBbk4D69gnBrp2; _gat=1; _ga=GA1.2.1163943480.1489752384; KONAPISID=eyJpdiI6IkQ4K2xjXC9ZbGhEUjN3eWFFV0paSDV3PT0iLCJ2YWx1ZSI6IlBPZXNMNjRCczhySmhyODNySnlGRUhnaVZ5U2FRWFJKMmpXRWZmUnplRkI3NkRKdGp5QkxxK2ZvdWJKdzNTOXBvZGp1ODlxcElcL3ZSTDNHc2NBTExEdz09IiwibWFjIjoiYmMxNTY2YTgwODM4NWFhOGMzNTlmZTg2ODFhMWEyZjk0ZmMxY2YzYmM0MDY0NTAzYmUyOTY3ZmM5MmFkMTAwOCJ9; KONAPISID=7d038c0d11f318c49dd93c38fe6252ca193e161f',
    'Connection':'keep-alive'
    }
 
@@ -72,11 +72,12 @@ def testPost(self):
    }
 
    #post请求的构造
-   res = requests.post('https://api.56come.cn/servlet/rfq/order/publish?KONAPISID=7d038c0d11f318c49dd93c38fe6252ca193e161f',
+   res = requests.post('https://api.56come.cn/servlet/rfq/order/publish?KONAPISID=bb20968408f8d9b9bc7647abc71f30fccf5a3e0d',
                       headers=headers,
                        data=keyword,verify=False)
 
-   print(res.text)
+   resposeStr = res.text
+   print(resposeStr)
    print(res.status_code)
 
    #验证
