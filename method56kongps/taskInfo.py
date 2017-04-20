@@ -5,33 +5,33 @@ from method import commonMethod
 def taskInfo(self, status):
 
     #任务详情
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/more_layout" ).click( )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/ll_more" ).click( )
 
-    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/package_material_key" )
-    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/task_no_key" )
+    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_package_material" )
+    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_task_status_key" )
     self.driver.drag_and_drop( e1, e2 )
 
-    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/goods_quantity_key" )
-    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/package_type_key" )
+    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_goods_quantity_key" )
+    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_package_type_key" )
     self.driver.drag_and_drop( e1, e2 )
 
     # 提货地址地图页
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/pickup_addr_image" ).click( )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_pickup_addr" ).click( )
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "pickupaddr.png" )
     # 返回
     self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
     # 联系人信息
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/pickup_icon" ).click( )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_pickup" ).click( )
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "contactsInfo.png" )
     # 返回
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_back" ).click( )
 
-    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/pickup_time_key" )
-    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/goods_quantity_key" )
+    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_pickup_time_key" )
+    e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_goods_quantity_key" )
     self.driver.drag_and_drop( e1, e2 )
 
     # 执行交接
@@ -40,7 +40,7 @@ def taskInfo(self, status):
         self.driver.find_element_by_id( "com.yihu001.kon.driver:id/handover" ).click( )
 
     # 到货地址地图页
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/delivery_addr_image" ).click( )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_delivery_addr" ).click( )
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "deliveryaddr.png" )
@@ -48,7 +48,7 @@ def taskInfo(self, status):
     self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
 
     # 联系人信息
-    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/delivery_icon" ).click( )
+    self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_delivery" ).click( )
     sleep( 2 )
     # 截图
     self.driver.get_screenshot_as_file( "contactsInfo2.png" )
