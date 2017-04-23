@@ -28,6 +28,7 @@ def uploadpicAgain(self,n):
 
 def uploadPic(self):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_two" ).click( )
+    sleep(2)
     self.driver.find_element_by_xpath( '//android.support.v7.widget.RecyclerView/'
                                        'android.widget.RelativeLayout[contains(@index,0)]' ).click( )
     self.driver.find_element_by_xpath( '//android.support.v7.widget.RecyclerView/'
@@ -35,6 +36,7 @@ def uploadPic(self):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_ok" ).click( )
     # 继续添加
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/add" ).click( )
+    sleep(2)
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_two" ).click( )
     self.driver.find_element_by_xpath( '//android.support.v7.widget.RecyclerView/'
                                        'android.widget.RelativeLayout[contains(@index,0)]' ).click( )

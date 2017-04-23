@@ -5,7 +5,7 @@ def createschedule(self):
 
     scheduleNo = time.strftime('%Y%m%d%X' ,time.localtime())
     truckNo = "辽A12345"
-    driverContact = "13900001127"
+    driverContact = "13900000417"
     driverName = "1127"
     memo = "自动测试调度备注"
 
