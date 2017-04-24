@@ -30,7 +30,7 @@ class MyTestCase(unittest.TestCase):
 
             #发送
             createDelivery.createDelivery(self)
-            self.driver.get_screenshot_as_file("delivery.png")
+            self.driver.get_screenshot_as_file(setParam56kon.screenCapturePath+"delivery.png")
 
         except Exception as e:
             print("失败了呢")

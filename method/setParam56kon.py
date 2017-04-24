@@ -1,6 +1,6 @@
 from appium import webdriver
 
-
+screenCapturePath = 'C:/Users/YUY/PycharmProjects/56kon2/app56konPro/screenCapture/'
 def setParam(self):
     desired_caps = {}
     desired_caps['platformName'] = 'Android'
