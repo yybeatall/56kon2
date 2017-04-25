@@ -20,24 +20,39 @@ class MyTestCase(unittest.TestCase):
         plateNo = "辽A12345"
         reportPhone = "13940914601"
         try:
-            if commonMethod.isElement(self,"xpath",'//android.widget.TextView[@text="停止上报"]'):
-                self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_start").click()
-
             '''从首页秀足迹按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/rl_one_key").click()
             sleep(3)
 
+            if commonMethod.isElement(self,"xpath",'//android.widget.TextView[@text="停止上报"]'):
+                self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_start").click()
+
             '''创建秀足迹'''
             # 选择车牌
             self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_select" ).click( )
-            self.driver.find_elements_by_class_name( "android.widget.RelativeLayout" )[1].click( )
+            if commonMethod.isElement(self,"id","com.yihu001.kon.driver:id/no_data_layout"):
+                self.driver.find_element_by_class_name("android.widget.ImageButton").click()
+            else:
+                self.driver.find_elements_by_class_name( "android.widget.RelativeLayout" )[0].click( )
 
             #填入车牌
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_plate").clear()
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_plate").send_keys(plateNo)
 
             #选择上报间隔
+            self.driver.find_element_by_id("com.yihu001.kon.driver:id/rl_interval").click()
+            #30s
+            self.driver.find_element_by_xpath('//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index=0]').click()
+
             #选择结束时间
+            self.driver.find_element_by_id("com.yihu001.kon.driver:id/rl_finish").click()
+
+            e1 = self.driver.find_element_by_xpath('//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index=4]')
+            e2 = self.driver.find_element_by_xpath('//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index=0]')
+            self.driver.drag_and_drop(e1,e2)
+            sleep(2)
+            self.driver.find_element_by_xpath(
+                '//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index=4]' ).click( )
 
             #添加报告对象
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_user").click()
@@ -45,7 +60,8 @@ class MyTestCase(unittest.TestCase):
             #授信企业
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_first").click()
             if commonMethod.isElement(self,"class","android.widget.RelativeLayout"):
-                self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[0].click()
+                self.driver.find_element_by_xpath(
+                    '//android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[@index=0]' ).click( )
                 self.driver.find_element_by_id( "com.yihu001.kon.driver:id/btn_ok" ).click( )
             else:
                 self.driver.find_elements_by_class_name("android.widget.ImageButton").click()

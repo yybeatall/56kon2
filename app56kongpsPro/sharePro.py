@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
 
             #筛选已完成
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/rl_status").click()
-            self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[4].click()
+            self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[5].click()
             sleep(3)
 
 
