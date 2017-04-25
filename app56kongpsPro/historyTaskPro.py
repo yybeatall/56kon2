@@ -3,14 +3,15 @@
 # 足迹版测试--历史任务流程测试
 import unittest
 from time import sleep
-from method56kongps import pickupDelivery
-from method import setParam56kongps
+
 from method import commonMethod
+from method import setParam56kongps
+from method56kongps import node
+from method56kongps import share
 from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
-from method56kongps import share
-from method56kongps import node
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
@@ -31,12 +32,12 @@ class MyTestCase(unittest.TestCase):
 
             #联系人信息
             self.driver.find_elements_by_id("com.yihu001.kon.driver:id/iv_pickup_icon")[0].click()
-            self.driver.get_screenshot_as_file("contactHistory.png")
+            self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"contactHistory.png")
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_back").click()
 
 
             '''菜单'''
-            self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/tv_order_no" )[0].click( )
+            self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_order_no" ).click( )
 
             #任务信息
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
