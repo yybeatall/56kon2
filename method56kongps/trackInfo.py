@@ -1,5 +1,6 @@
 from time import sleep
 
+from method import setParam56kongps
 from method56kongps import share
 def trackInfo(self):
     #数据切换
@@ -12,19 +13,19 @@ def trackInfo(self):
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_expand_menu_button").click()
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_detail").click()
     #截图
-    self.driver.get_screenshot_as_file("trackdetail.png")
+    self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"trackdetail.png")
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/ll_root").click()
     # menu
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/fab_expand_menu_button" ).click( )
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_location").click()
     #截图
-    self.driver.get_screenshot_as_file("tracklocation.png")
+    self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"tracklocation.png")
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_cancel").click()
     # menu
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/fab_expand_menu_button" ).click( )
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_timeline").click()
     #截图
-    self.driver.get_screenshot_as_file("tracktimeline.png")
+    self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"tracktimeline.png")
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_close").click()
     # menu
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/fab_expand_menu_button" ).click( )
