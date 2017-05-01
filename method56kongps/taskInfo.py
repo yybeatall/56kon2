@@ -8,7 +8,7 @@ def taskInfo(self, status):
     #任务详情
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/ll_more" ).click( )
 
-    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_package_material" )
+    e1 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_package_material_key" )
     e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_task_status_key" )
     self.driver.drag_and_drop( e1, e2 )
 

@@ -33,16 +33,6 @@ class MyTestCase(unittest.TestCase):
 
             sleep(3)
 
-            #排序筛选
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_sort_by").click()
-            self.driver.find_elements_by_class_name("android.widget.RelativeLayout")[1].click()
-            sleep( 2 )
-
-            #状态筛选
-            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_status").click()
-            self.driver.find_elements_by_class_name( "android.widget.RelativeLayout" )[4].click( )
-            sleep( 2 )
-
             '''菜单'''
             if commonMethod.isElement( self, "id","com.yihu001.kon.driver:id/tv_code"):
                 self.driver.find_elements_by_id("com.yihu001.kon.driver:id/tv_code")[0].click( )
