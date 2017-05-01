@@ -1,5 +1,6 @@
 from time import sleep
 
+from method import commonMethod
 from method import setParam56kongps
 from method56kongps import share
 def trackInfo(self):
@@ -18,9 +19,10 @@ def trackInfo(self):
     # menu
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/fab_expand_menu_button" ).click( )
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_location").click()
-    #截图
-    self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"tracklocation.png")
-    self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_cancel").click()
+    if commonMethod.isElement(self,"id","com.yihu001.kon.driver:id/iv_cancel"):
+        #截图
+        self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"tracklocation.png")
+        self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_cancel").click()
     # menu
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/fab_expand_menu_button" ).click( )
     self.driver.find_element_by_id("com.yihu001.kon.driver:id/fab_timeline").click()

@@ -1,6 +1,6 @@
 # usr/bin/python
 # encoding:utf-8
-# 足迹版测试--注销
+# 综合版测试--注销
 import unittest
 from time import sleep
 

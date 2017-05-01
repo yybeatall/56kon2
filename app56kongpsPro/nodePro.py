@@ -3,14 +3,14 @@
 # 足迹版测试--执行定检流程测试
 import unittest
 from time import sleep
-from method56kongps import pickupDelivery
+
 from method import setParam56kongps
-from method import commonMethod
+from method56kongps import node
+from method56kongps import share
 from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
-from method56kongps import share
-from method56kongps import node
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
@@ -34,15 +34,15 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_class_name("android.widget.LinearLayout").click()
 
             '''菜单操作项'''
-            # #任务详情
-            # self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
-            # taskInfo.taskInfo(self,'')
-            # print( "任务详情" )
-            #
-            # #运输轨迹
-            # self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_track").click()
-            # trackInfo.trackInfo(self)
-            # print("运输轨迹")
+            #任务详情
+            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
+            taskInfo.taskInfo(self,'')
+            print( "任务详情" )
+
+            #运输轨迹
+            self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_track").click()
+            trackInfo.trackInfo(self)
+            print("运输轨迹")
 
             #执行定检
             #扫码交接未实现
