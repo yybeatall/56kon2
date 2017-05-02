@@ -52,7 +52,7 @@ class MyTestCase(unittest.TestCase):
 
             #完成
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/bt_complete").click()
-
+            print(username)
 
 
         except Exception as e:
