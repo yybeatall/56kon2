@@ -46,12 +46,10 @@ historyTaskCases = unittest.TestLoader().loadTestsFromTestCase( historyTaskPro.M
 homeSearchCases = unittest.TestLoader().loadTestsFromTestCase( homeSearchPro.MyTestCase )
 
 '''1.全流程'''
-'''注册-注销-忘记密码-注销-登录-秀足迹-批量提到货（交接按钮）-单个提货（交接按钮）-单个到货（交接按钮）-
+'''登录-秀足迹-批量提到货（交接按钮）-单个提货（交接按钮）-单个到货（交接按钮）-
 批量提货（首页待提）-批量到货（首页待到）-定检-我的共享-历史任务-搜索任务-注销'''
 
-mysuite = unittest.TestSuite([registerCases,
-                              logutCases,
-                              loginCases,
+mysuite = unittest.TestSuite([loginCases,
                               showCases,
                               handoverBatchCases,
                               handoverPickupCases,
@@ -62,7 +60,6 @@ mysuite = unittest.TestSuite([registerCases,
                               shareCases,
                               historyTaskCases,
                               homeSearchCases,
-                              forgotPwdCases,
                               logutCases])
 
 '''2.提到货流程'''
@@ -75,7 +72,7 @@ mysuite2 = unittest.TestSuite([handoverBatchCases,
                               DeliveryBatchCases])
 
 '''3.登录注册等'''
-'''注册-注销-登录-注销-忘记密码-注销'''
+'''注册-注销-登录'''
 
 mysuite3 = unittest.TestSuite([registerCases,
                                logutCases,
