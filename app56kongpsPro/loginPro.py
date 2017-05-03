@@ -26,6 +26,7 @@ class MyTestCase(unittest.TestCase):
         sleep(3)
 
     def tearDown(self):
+        print("足迹版测试--登录")
         self.driver.quit()
 
 

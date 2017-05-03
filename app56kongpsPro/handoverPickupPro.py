@@ -114,6 +114,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def tearDown(self):
+        print( "足迹版测试--从批量交接进入单个任务执行提货交接流程" )
         self.driver.quit()
 
 

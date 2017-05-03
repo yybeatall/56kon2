@@ -132,6 +132,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def tearDown(self):
+        print( "足迹版测试--我的共享流程测试" )
         self.driver.quit()
 
 

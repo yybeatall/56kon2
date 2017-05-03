@@ -79,6 +79,7 @@ class MyTestCase(unittest.TestCase):
 
 
         except Exception as e:
+            print("足迹版测试--首页搜索流程")
             print(e)
 
 

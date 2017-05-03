@@ -36,6 +36,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def tearDown(self):
+        print("足迹版测试--首页提货交接流程")
         self.driver.quit()
 
 

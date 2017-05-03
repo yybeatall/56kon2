@@ -1,24 +1,27 @@
 import time
 from time import sleep
 
-def createTask(self):
+def createTask(self,goodsName,goodsCount,goodsWeight,goodsVolume,
+               seller,sellerContact,startCity,fromWhere,
+               buyer,buyerContact,endCity,toWhere,
+               memo):
     taskorder = time.strftime('%Y%m%d%X' ,time.localtime())
-    goodsName = "每日货物"
-    goodsCount = "10"
-    goodsWeight = "100"
-    goodsVolume = "200"
-
-    seller = "发货方"
-    sellerContact = "13811111111"
-    startCity = "北京"
-    fromWhere = "北京市朝阳区望京东园523号融科望京中心B座"
-
-    buyer = "收货方"
-    buyerContact = "13822222222"
-    endCity = "上海"
-    toWhere = "上海市浦东新区浦东大道国际航运金融大厦"
-
-    memo = "自动测试创建任务备注"
+    # goodsName = "每日货物"
+    # goodsCount = "10"
+    # goodsWeight = "100"
+    # goodsVolume = "200"
+    #
+    # seller = "发货方"
+    # sellerContact = "13811111111"
+    # startCity = "北京"
+    # fromWhere = "北京市朝阳区望京东园523号融科望京中心B座"
+    #
+    # buyer = "收货方"
+    # buyerContact = "13822222222"
+    # endCity = "上海"
+    # toWhere = "上海市浦东新区浦东大道国际航运金融大厦"
+    #
+    # memo = "自动测试创建任务备注"
 
     '''基本信息'''
     # 输入任务编号

@@ -29,7 +29,7 @@ def getExcel(rowValue, colValue, file_name='test.xlsx'):
     return sheet.cell_value(rowValue, colValue)
 
 
-def getDdtExcel(file_name='test.xlsx'):
+def getDdtExcel(file_name):
     rows = []
     book = xlrd.open_workbook(file_name)
     sheet = book.sheet_by_index(0)

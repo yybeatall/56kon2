@@ -32,6 +32,7 @@ class MyTestCase(unittest.TestCase):
         self.driver.get_screenshot_as_file("logout.png")
 
     def tearDown(self):
+        print("足迹版测试--注销")
         self.driver.quit()
 
 

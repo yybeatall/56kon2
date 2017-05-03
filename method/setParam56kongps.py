@@ -18,6 +18,6 @@ def setParam(self):
     desired_caps['appActivity'] = '.ui.activity.MainActivity'
     desired_caps["unicodeKeyboard"] = "True"
     desired_caps["resetKeyboard"] = "True"
-    desired_caps["automationName"] = "Selendroid"
+    #desired_caps["automationName"] = "Selendroid"
     self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return self.driver

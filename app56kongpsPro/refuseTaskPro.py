@@ -31,6 +31,7 @@ class MyTestCase(unittest.TestCase):
 
 
         except Exception as e:
+            print("足迹版测试--司机拒绝任务流程")
             print(e)
 
 

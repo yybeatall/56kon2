@@ -1,6 +1,6 @@
 # usr/bin/python
 # encoding:utf-8
-# 足迹版测试--秀足迹流程测试
+# 足迹版测试--秀足迹流程
 import unittest
 from time import sleep
 from method56kongps import pickupDelivery
@@ -121,6 +121,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def tearDown(self):
+        print("足迹版测试--秀足迹流程")
         self.driver.quit()
 
 

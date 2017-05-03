@@ -64,6 +64,7 @@ class MyTestCase(unittest.TestCase):
 
         except Exception as e:
             print(e)
+            print( "足迹版测试--历史任务流程测试" )
 
 
     def tearDown(self):

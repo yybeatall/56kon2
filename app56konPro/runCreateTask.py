@@ -11,17 +11,14 @@ from app56konPro import logoutPro
 # mysuite.addTest(loginsucc.MyTestCase("testLogIn"))
 # mysuite.addTest(loginsucc.MyTestCase("testLoginsucc"))
 # mysuite.addTest(pickup.MyTestCase("testPickup"))
-i = 0
-while (i<3):
 
-    # 执行创建任务并调度
-    createTaskDispatchcases = unittest.TestLoader().loadTestsFromTestCase( createTaskDispatchPro.MyTestCase )
+# 执行创建任务并调度
+createTaskDispatchcases = unittest.TestLoader().loadTestsFromTestCase( createTaskDispatchPro.MyTestCase )
 
-    mysuite = unittest.TestSuite([createTaskDispatchcases])
+mysuite = unittest.TestSuite([createTaskDispatchcases])
 
-    # mysuite.addTest(unittestdemo.MyTestCase("testLogIn"))
-    # mysuite.addTest(pickup.MyTestCase("testPickup"))
+# mysuite.addTest(unittestdemo.MyTestCase("testLogIn"))
+# mysuite.addTest(pickup.MyTestCase("testPickup"))
 
-    myrunner = unittest.TextTestRunner(verbosity=2)
-    myrunner.run(mysuite)
-    i = i+1
+myrunner = unittest.TextTestRunner(verbosity=2)
+myrunner.run(mysuite)

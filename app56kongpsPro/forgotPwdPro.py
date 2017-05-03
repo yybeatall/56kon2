@@ -37,6 +37,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_sign").click()
 
         except Exception as e:
+            print("足迹测试--忘记密码")
             print(e)
 
     def tearDown(self):

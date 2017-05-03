@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
         self.driver = setParam56kongps.setParam( self )
 
     mobile = commonMethod.mobileNo("139")
-    name = mobile[-4:]
+    name = mobile[-4:]+"姓名"
 
     @data((mobile, "123456",name))
     @unpack
@@ -59,6 +59,7 @@ class MyTestCase(unittest.TestCase):
             print(e)
 
     def tearDown(self):
+        print( "足迹版测试--注册" )
         self.driver.quit()
 
 
