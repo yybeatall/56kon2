@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
         # desired_caps['platformVersion'] = '5.1.1'
         # desired_caps['deviceName'] = 'd727fe13'
         desired_caps['appPackage'] = 'com.yihu001.kon.driver'
-        desired_caps['appActivity'] = '.activity.LoginActivity'
+        desired_caps['appActivity'] = '.ui.activity.MainActivity'
         desired_caps["unicodeKeyboard"] = "True"
         desired_caps["resetKeyboard"] = "True"
         #desired_caps["automationName"] = "Selendroid"
@@ -37,7 +37,7 @@ class MyTestCase(unittest.TestCase):
     @unpack
     def testLogIn(self, username, password, expectedresult):
         global exist
-        self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_user_name").send_keys(username)
+        self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_name").send_keys(username)
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_pwd").send_keys(password)
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_sign").click()
 

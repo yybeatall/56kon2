@@ -45,6 +45,10 @@ historyTaskCases = unittest.TestLoader().loadTestsFromTestCase( historyTaskPro.M
 #搜索任务
 homeSearchCases = unittest.TestLoader().loadTestsFromTestCase( homeSearchPro.MyTestCase )
 
+#登录失败
+loginFaildCases = unittest.TestLoader().loadTestsFromTestCase( loginFaild.MyTestCase )
+
+
 '''1.全流程'''
 '''登录-秀足迹-批量提到货（交接按钮）-单个提货（交接按钮）-单个到货（交接按钮）-
 批量提货（首页待提）-批量到货（首页待到）-定检-我的共享-历史任务-搜索任务-注销'''
@@ -78,6 +82,9 @@ mysuite3 = unittest.TestSuite([registerCases,
                                logutCases,
                                loginCases])
 
+'''4.登录失败测试ddt'''
+mysuite4 = unittest.TestSuite([loginFaildCases])
+
 with open('HTMLReport.html', 'wb') as f:
     myrunner = HTMLTestRunner(stream=f,
                               title='56kongps Test Report',
@@ -85,4 +92,4 @@ with open('HTMLReport.html', 'wb') as f:
                               verbosity=2
                                 )
     #unittest.TextTestRunner(verbosity=2)
-    myrunner.run(mysuite3)
+    myrunner.run(mysuite2)
