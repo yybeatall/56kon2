@@ -93,3 +93,4 @@ with open('HTMLReport.html', 'wb') as f:
                                 )
     #unittest.TextTestRunner(verbosity=2)
     myrunner.run(mysuite2)
+    f.close()

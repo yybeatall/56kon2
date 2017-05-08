@@ -10,6 +10,7 @@ from ddt import ddt, data, unpack
 
 @ddt
 class MyTestCase(unittest.TestCase):
+    u"""登陆失败测试"""
     def setUp(self):
         #天天模拟器
         desired_caps = {}
@@ -36,6 +37,7 @@ class MyTestCase(unittest.TestCase):
 
     @unpack
     def testLogIn(self, username, password, expectedresult):
+        u"""登陆失败测试"""
         global exist
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_name").send_keys(username)
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_pwd").send_keys(password)

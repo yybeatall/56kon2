@@ -12,11 +12,13 @@ from method56kongps import uploadPic
 
 
 class MyTestCase(unittest.TestCase):
+    u"""从批量交接进入单个任务执行提货交接流程"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHandover(self):
+        u"""从批量交接进入单个任务执行提货交接流程"""
         try:
             '''从首页交接按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_handover").click()
@@ -32,6 +34,7 @@ class MyTestCase(unittest.TestCase):
             # 任务详情
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_detail").click()
             taskInfo.taskInfo(self,"")
+            u"""任务详情"""
 
             #上传照片
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_picture").click()

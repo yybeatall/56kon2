@@ -16,12 +16,15 @@ from method56kongps import share
 
 @ddt
 class MyTestCase(unittest.TestCase):
+    u"""我的页面-测试流程"""
     
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)   
 
     '''设置'''
     def testSet(self):
+        u"""我的页面-设置流程测试"""
+        # TODO：混合模式待调整
         oldPwd = "111111"
         newPwd = "111111"
         username = "13900000417"
@@ -165,6 +168,8 @@ class MyTestCase(unittest.TestCase):
 
     '''个人信息修改以及财富中心'''
     def testPersonalInfo(self):
+        u"""我的页面-个人信息修改以及财富中心"""
+        # TODO：混合模式待调整
         try:
             self.driver.find_elements_by_id( setParam56kongps.appPackageName+"bottom_navigation_container" )[3].click( )
             #编辑个人信息
@@ -181,8 +186,10 @@ class MyTestCase(unittest.TestCase):
         except Exception as e:
             print(e)
 
-    '''个人信息修改以及财富中心'''
+    '''通讯录'''
     def testAddrList(self):
+        u"""我的页面-通讯录操作流程测试"""
+        # TODO：未完成
         try:
             self.driver.find_elements_by_id( setParam56kongps.appPackageName+"bottom_navigation_container" )[3].click( )
             #联系人
@@ -201,6 +208,7 @@ class MyTestCase(unittest.TestCase):
 
     @data("辽A12345","沪B111111","沪BB11111","沪AAAAAAA")
     def testPlateRecordAdd(self,plateNo):
+        u"""我的页面-添加车牌记录流程"""
         try:
             '''进入我的页面'''
             self.driver.find_elements_by_id( setParam56kongps.appPackageName+"bottom_navigation_container" )[3].click( )
@@ -224,6 +232,7 @@ class MyTestCase(unittest.TestCase):
             print(e)
 
     def testPlateRecordEdit(self):
+        u"""我的页面-编辑车牌记录流程"""
         try:
             '''进入我的页面'''
             self.driver.find_elements_by_id( setParam56kongps.appPackageName+"bottom_navigation_container" )[3].click( )

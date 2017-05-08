@@ -2,6 +2,7 @@ from time import sleep
 
 
 def uploadPicFirst(self):
+    u"""上传照片"""
     i = 0
     list = self.driver.find_elements_by_id( "com.yihu001.kon.driver:id/iv_add_pic_b" )
     count = len(list)

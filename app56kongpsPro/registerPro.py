@@ -11,6 +11,7 @@ from method import setParam56kongps
 
 @ddt
 class MyTestCase(unittest.TestCase):
+    u"""注册流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam( self )
 
@@ -20,6 +21,7 @@ class MyTestCase(unittest.TestCase):
     @data((mobile, "123456",name))
     @unpack
     def testRegister(self, username, password,name):
+        u"""注册流程测试"""
         try:
 
             global exist

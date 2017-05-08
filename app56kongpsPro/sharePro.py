@@ -12,11 +12,13 @@ from method56kongps import uploadPic
 from method56kongps import share
 
 class MyTestCase(unittest.TestCase):
+    u"""我的共享流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testShare(self):
+        u"""我的共享流程测试"""
         sharePhone = "13940914601"
         try:
             '''从首页我的共享按钮进入'''

@@ -13,11 +13,14 @@ from method56kongps import quotePublishPost
 
 
 class MyTestCase(unittest.TestCase):
+    u"""询价流程测试"""
     # def setUp(self):
     #     self.driver = setParam56kongps.setParam(self)
 
 
     def testQuote(self):
+        u"""询价流程测试"""
+        # TODO:未完成
 
         try:
             result = quotePublishPost.testPost(self)

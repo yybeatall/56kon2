@@ -14,11 +14,13 @@ from method56kongps import node
 from appium import webdriver
 
 class MyTestCase(unittest.TestCase):
+    u"""首页搜索流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHomeSearch(self):
+        u"""首页搜索流程测试"""
         searchContent = '1'
 
         try:

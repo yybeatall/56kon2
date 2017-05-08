@@ -13,12 +13,11 @@ from method56kongps import share
 from method56kongps import node
 
 class MyTestCase(unittest.TestCase):
-    def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
-
+    u"""帮助站流程测试"""
 
     def testHistoryTask(self):
-
+        u"""帮助站流程测试"""
+        # TODO:help
         try:
             e1 = self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_upload_photo")
             e2 = self.driver.find_element_by_id( "com.yihu001.kon.driver:id/tv_city" )
@@ -32,6 +31,10 @@ class MyTestCase(unittest.TestCase):
 
         except Exception as e:
             print(e)
+
+
+    def setUp(self):
+        self.driver = setParam56kongps.setParam(self)
 
 
     def tearDown(self):

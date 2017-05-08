@@ -10,6 +10,7 @@ from method import setParam56kongps
 
 @ddt
 class MyTestCase(unittest.TestCase):
+    u"""忘记密码流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam( self )
 
@@ -17,6 +18,7 @@ class MyTestCase(unittest.TestCase):
     @data(("13900000417", "111111"))
     @unpack
     def testRegister(self, username, password):
+        u"""忘记密码流程测试"""
         try:
 
             global exist

@@ -1,6 +1,6 @@
 # usr/bin/python
 # encoding:utf-8
-# 足迹版测试--注销
+# 足迹版测试--注销流程测试
 import unittest
 from time import sleep
 
@@ -8,9 +8,11 @@ from method import setParam56kongps
 
 
 class MyTestCase(unittest.TestCase):
+    u"""注销流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam( self )
     def testLogout(self):
+        u"""注销流程测试"""
         #点击我的
         self.driver.find_elements_by_id("com.yihu001.kon.driver:id/bottom_navigation_container")[3].click()
         #点击设置按钮

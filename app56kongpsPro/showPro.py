@@ -12,11 +12,13 @@ from method56kongps import uploadPic
 from method56kongps import share
 
 class MyTestCase(unittest.TestCase):
+    u"""秀足迹流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testShow(self):
+        u"""秀足迹流程测试"""
         plateNo = "辽A12345"
         reportPhone = "13940914601"
         try:

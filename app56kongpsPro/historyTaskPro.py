@@ -14,11 +14,13 @@ from method56kongps import uploadPic
 
 
 class MyTestCase(unittest.TestCase):
+    u"""历史任务流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHistoryTask(self):
+        u"""历史任务流程测试"""
 
         try:
             '''从首页历史任务按钮进入'''

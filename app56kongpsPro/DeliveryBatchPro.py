@@ -11,11 +11,13 @@ from method56kongps import pickupDelivery
 
 
 class MyTestCase(unittest.TestCase):
+    u"""首页到货交接流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHandoverBatch(self):
+        u"""首页到货交接流程测试"""
         try:
             '''从首页待提区域进入'''
             if commonMethod.isElement(self,"id","com.yihu001.kon.driver:id/tv_delivery_count"):

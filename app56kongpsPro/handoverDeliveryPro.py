@@ -13,11 +13,13 @@ from method56kongps import taskInfo
 
 
 class MyTestCase(unittest.TestCase):
+    u"""从批量交接进入单个任务执行到货交接流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHandover(self):
+        u"""从批量交接进入单个任务执行到货交接流程测试"""
         try:
             '''从首页交接按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_handover").click()

@@ -9,11 +9,13 @@ from method import setParam56kongps
 
 
 class MyTestCase(unittest.TestCase):
+    u"""司机拒绝任务流程测试"""
     def setUp(self):
         self.driver = setParam56kongps.setParam(self)
 
 
     def testHandover(self):
+        u"""司机拒绝任务流程测试"""
         try:
             '''从首页交接按钮进入'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_handover").click()
