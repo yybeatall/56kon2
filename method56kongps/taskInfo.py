@@ -21,14 +21,14 @@ def taskInfo(self, status):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_pickup_addr" ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+'pickupaddr.png')
+    self.driver.get_screenshot_as_file( shotPath+'pickupaddr.png')
     # 返回
     self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
     # 联系人信息
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_pickup" ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+'contactsInfo.png')
+    self.driver.get_screenshot_as_file( shotPath+'contactsInfo.png')
     # 返回
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_back" ).click( )
 
@@ -45,7 +45,7 @@ def taskInfo(self, status):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_delivery_addr" ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+'deliveryaddr.png')
+    self.driver.get_screenshot_as_file( shotPath+'deliveryaddr.png')
     # 返回
     self.driver.find_element_by_class_name( "android.widget.ImageButton" ).click( )
 
@@ -53,7 +53,7 @@ def taskInfo(self, status):
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_delivery" ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+"contactsInfo2.png" )
+    self.driver.get_screenshot_as_file( shotPath+"contactsInfo2.png" )
     # 返回
     self.driver.find_element_by_id( "com.yihu001.kon.driver:id/iv_back" ).click( )
 
@@ -65,18 +65,18 @@ def taskInfo(self, status):
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="调度"]' ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+"dispatchInfo.png" )
+    self.driver.get_screenshot_as_file( shotPath+"dispatchInfo.png" )
 
     '''照片详情'''
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="照片"]' ).click( )
     sleep( 2 )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+"photoInfo.png" )
+    self.driver.get_screenshot_as_file( shotPath+"photoInfo.png" )
 
     '''定检详情'''
     self.driver.find_element_by_xpath( '//android.widget.TextView[@text="定检"]' ).click( )
     # 截图
-    self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+"checkInfo.png" )
+    self.driver.get_screenshot_as_file( shotPath+"checkInfo.png" )
 
     #返回
     self.driver.find_element_by_class_name("android.widget.ImageButton").click()
