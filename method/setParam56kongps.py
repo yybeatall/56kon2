@@ -1,6 +1,8 @@
+import time
 from appium import webdriver
 
 screenCapturePath = '/Users/YUY/PycharmProjects/56kon2/app56kongpsPro/screenCapture/'
+now = time.strftime("%Y-%m-%d %H_%M_%S")
 #appPackageName = "com.yihu001.kon.driver:id/"
 appPackageName = ""
 def setParam(self):

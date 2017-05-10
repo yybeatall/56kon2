@@ -10,6 +10,7 @@ from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
 from method56kongps import share
+shotPath = setParam56kongps.screenCapturePath + "我的共享流程测试/"+setParam56kongps.now
 
 class MyTestCase(unittest.TestCase):
     u"""我的共享流程测试"""
@@ -32,7 +33,7 @@ class MyTestCase(unittest.TestCase):
 
             #联系人信息
             self.driver.find_elements_by_id("com.yihu001.kon.driver:id/iv_pickup_icon")[0].click()
-            self.driver.get_screenshot_as_file("contactShare.png")
+            self.driver.get_screenshot_as_file(shotPath+"contactShare.png")
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_back").click()
 
             #筛选已完成

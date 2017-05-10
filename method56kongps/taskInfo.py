@@ -2,6 +2,7 @@ from time import sleep
 from method import commonMethod
 from method import setParam56kongps
 
+shotPath = setParam56kongps.screenCapturePath + "任务详情/"+setParam56kongps.now
 
 def taskInfo(self, status):
 

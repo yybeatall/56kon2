@@ -11,6 +11,7 @@ from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
 
+shotPath = setParam56kongps.screenCapturePath + "执行定检流程测试/"+setParam56kongps.now
 
 class MyTestCase(unittest.TestCase):
     u"""执行定检流程测试"""
@@ -28,7 +29,7 @@ class MyTestCase(unittest.TestCase):
             #联系人信息页
             self.driver.find_elements_by_id("com.yihu001.kon.driver:id/iv_pickup_icon")[0].click()
             #截图
-            self.driver.get_screenshot_as_file("contactFromNode.png")
+            self.driver.get_screenshot_as_file(shotPath+"contactFromNode.png")
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_back").click()
 
 

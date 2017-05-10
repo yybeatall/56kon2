@@ -12,6 +12,7 @@ from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
 
+shotPath = setParam56kongps.screenCapturePath + "历史任务流程测试/"+setParam56kongps.now
 
 class MyTestCase(unittest.TestCase):
     u"""历史任务流程测试"""
@@ -34,7 +35,7 @@ class MyTestCase(unittest.TestCase):
 
             #联系人信息
             self.driver.find_elements_by_id("com.yihu001.kon.driver:id/iv_pickup_icon")[0].click()
-            self.driver.get_screenshot_as_file(setParam56kongps.screenCapturePath+"contactHistory.png")
+            self.driver.get_screenshot_as_file(shotPath+"contactHistory.png")
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_back").click()
 
 

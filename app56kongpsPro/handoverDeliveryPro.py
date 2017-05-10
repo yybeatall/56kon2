@@ -11,6 +11,7 @@ from method56kongps import trackInfo
 from method56kongps import uploadPic
 from method56kongps import taskInfo
 
+shotPath = setParam56kongps.screenCapturePath + "从批量交接进入单个任务执行到货交接流程/"+setParam56kongps.now
 
 class MyTestCase(unittest.TestCase):
     u"""从批量交接进入单个任务执行到货交接流程测试"""
@@ -56,7 +57,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/tv_task_track").click()
             sleep(2)
             # 截图
-            self.driver.get_screenshot_as_file( setParam56kongps.screenCapturePath+'track.png' )
+            self.driver.get_screenshot_as_file( shotPath+'track.png' )
             trackInfo.trackInfo(self)
 
             #共享货跟

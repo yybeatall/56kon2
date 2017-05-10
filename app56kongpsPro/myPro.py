@@ -13,7 +13,7 @@ from method56kongps import taskInfo
 from method56kongps import trackInfo
 from method56kongps import uploadPic
 from method56kongps import share
-
+shotPath = setParam56kongps.screenCapturePath + "我的页面-测试流程/"+setParam56kongps.now
 @ddt
 class MyTestCase(unittest.TestCase):
     u"""我的页面-测试流程"""
@@ -71,7 +71,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_id(setParam56kongps.appPackageName+"tv_about").click()
             sleep(3)
             #截图
-            self.driver.get_screenshot_as_file("about.png")
+            self.driver.get_screenshot_as_file(shotPath+"about.png")
             self.driver.find_element_by_class_name("android.widget.ImageButton").click()
 
             #帮助中心
@@ -79,7 +79,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.switch_to.context( 'WEBVIEW_0' )
             self.driver.find_element_by_xpath("/html/body/div/a/div").click()
             self.driver.find_element_by_xpath('/html/body/div/ul/li[1]/a/span').click()
-            self.driver.get_screenshot_as_file("help-q.png")
+            self.driver.get_screenshot_as_file(shotPath+"help-q.png")
             #返回键
             self.driver.keyevent(4)
 
@@ -87,37 +87,37 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_xpath('/html/body/div/div/div[1]/div[1]/a/i').click()
             #交接-列表模式
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[1]/div[1]').click()
-            self.driver.get_screenshot_as_file( "help-h1.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-h1.png" )
             #返回键
             self.driver.keyevent(4)
             #交接-地图模式
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[1]/div[2]').click()
-            self.driver.get_screenshot_as_file( "help-h2.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-h2.png" )
             #返回键
             self.driver.keyevent(4)
             #扫码交接
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[2]/div[1]').click()
-            self.driver.get_screenshot_as_file( "help-h3.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-h3.png" )
             #返回键
             self.driver.keyevent(4)
             #上传照片
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[2]/div[2]').click()
-            self.driver.get_screenshot_as_file( "help-p.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-p.png" )
             #返回键
             self.driver.keyevent(4)
             #执行定检
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[3]/div[1]').click()
-            self.driver.get_screenshot_as_file( "help-n.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-n.png" )
             #返回键
             self.driver.keyevent(4)
             #秀足迹
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[3]/div[2]').click()
-            self.driver.get_screenshot_as_file( "help-s.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-s.png" )
             #返回键
             self.driver.keyevent(4)
             #竞价
             self.driver.find_element_by_xpath('/html/body/div/div[3]/div[4]/div').click()
-            self.driver.get_screenshot_as_file( "help-q.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-q.png" )
             #返回键
             self.driver.keyevent(4)
             #返回键
@@ -127,12 +127,12 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_xpath('/html/body/div/div/div[1]/div[2]/a/i').click()
             #注册
             self.driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[1]').click()
-            self.driver.get_screenshot_as_file( "help-r.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-r.png" )
             #返回键
             self.driver.keyevent(4)
             #忘记密码
             self.driver.find_element_by_xpath('/html/body/div/div[2]/div[1]/div[2]').click()
-            self.driver.get_screenshot_as_file( "help-f.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-f.png" )
             #返回键
             self.driver.keyevent(4)
             #我的二维码---获取不到位置
@@ -147,7 +147,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_xpath('/html/body/div/div/div[2]/div/a/i').click()
             #添加联系人
             self.driver.find_element_by_xpath('/html/body/div/div[2]/div/div').click()
-            self.driver.get_screenshot_as_file( "help-c.png" )
+            self.driver.get_screenshot_as_file( shotPath+"help-c.png" )
             #返回键
             self.driver.keyevent(4)
             #返回键
@@ -161,7 +161,7 @@ class MyTestCase(unittest.TestCase):
             self.driver.find_element_by_xpath( '//android.widget.TextView[@text="版本更新"]' ).click( )
             #联系我们
             self.driver.find_element_by_id( setParam56kongps.appPackageName+"tv_contact" ).click( )
-            self.driver.get_screenshot_as_file( "contactus.png" )
+            self.driver.get_screenshot_as_file( shotPath+"contactus.png" )
 
         except Exception as e:
             print(e)
@@ -220,7 +220,7 @@ class MyTestCase(unittest.TestCase):
             '''点击车牌记录'''
             self.driver.find_element_by_id(setParam56kongps.appPackageName+"rl_plate").click()
             #截图--无记录页的显示
-            self.driver.get_screenshot_as_file("plate.png")
+            self.driver.get_screenshot_as_file(shotPath+"plate.png")
 
             #添加车牌
             self.driver.find_element_by_id(setParam56kongps.appPackageName+"add").click()

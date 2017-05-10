@@ -11,7 +11,7 @@ from method56kongps import trackInfo
 from method56kongps import uploadPic
 from method56kongps import share
 from method56kongps import node
-
+shotPath = setParam56kongps.screenCapturePath + "帮助站流程测试/"+setParam56kongps.now
 class MyTestCase(unittest.TestCase):
     u"""帮助站流程测试"""
 
@@ -26,7 +26,7 @@ class MyTestCase(unittest.TestCase):
             '''热门推荐'''
             self.driver.find_element_by_id("com.yihu001.kon.driver:id/iv_img").click()
             sleep(3)
-            self.driver.get_screenshot_as_file("热门推荐.png")
+            self.driver.get_screenshot_as_file(shotPath+"热门推荐.png")
 
 
         except Exception as e:
