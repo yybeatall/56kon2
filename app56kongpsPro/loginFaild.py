@@ -7,6 +7,8 @@ from time import sleep
 
 from appium import webdriver
 from ddt import ddt, data, unpack
+from method import commonMethod
+from method56kongps import logout
 
 @ddt
 class MyTestCase(unittest.TestCase):
@@ -39,6 +41,10 @@ class MyTestCase(unittest.TestCase):
     def testLogIn(self, username, password, expectedresult):
         u"""登陆失败测试"""
         global exist
+        if not commonMethod.isElement( self, "id", "com.yihu001.kon.driver:id/tv_reg" ):
+            # 判断是否登录，如果已登录需注销
+            logout.logout( self )
+            sleep( 2 )
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_name").send_keys(username)
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/et_pwd").send_keys(password)
         self.driver.find_element_by_id("com.yihu001.kon.driver:id/btn_sign").click()
