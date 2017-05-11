@@ -11,7 +11,7 @@ from method import setParam56kongps
 class MyTestCase(unittest.TestCase):
     u"""司机拒绝任务流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testHandover(self):

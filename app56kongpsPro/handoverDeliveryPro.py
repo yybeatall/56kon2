@@ -16,7 +16,7 @@ shotPath = setParam56kongps.screenCapturePath + "从批量交接进入单个任�
 class MyTestCase(unittest.TestCase):
     u"""从批量交接进入单个任务执行到货交接流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testHandover(self):

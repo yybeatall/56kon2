@@ -13,7 +13,7 @@ from method import setParam56kongps
 class MyTestCase(unittest.TestCase):
     u"""登录流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam( self )
+        self.driver = setParam56kongps.setParam( self,"")
 
     @data(("13900000417", "111111"))
     @unpack

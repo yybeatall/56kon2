@@ -5,7 +5,7 @@ screenCapturePath = '/Users/YUY/PycharmProjects/56kon2/app56kongpsPro/screenCapt
 now = time.strftime("%Y-%m-%d %H_%M_%S")
 #appPackageName = "com.yihu001.kon.driver:id/"
 appPackageName = ""
-def setParam(self):
+def setParam(self,automationName):
     desired_caps = {}
     desired_caps['platformName'] = 'Android'
     # 天天模拟器
@@ -20,6 +20,10 @@ def setParam(self):
     desired_caps['appActivity'] = '.ui.activity.MainActivity'
     desired_caps["unicodeKeyboard"] = "True"
     desired_caps["resetKeyboard"] = "True"
-    #desired_caps["automationName"] = "Selendroid"
+    if automationName == "S":
+        desired_caps["automationName"] = "Selendroid"
+        #desired_caps["autoWebview"] = "true"
+        desired_caps["noReset"] = "true"
+        desired_caps["app"] = "C:\\Users\YUY\Desktop\share\kongps_3.5.8_android.apk"
     self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return self.driver

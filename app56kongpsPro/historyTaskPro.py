@@ -17,7 +17,7 @@ shotPath = setParam56kongps.screenCapturePath + "历史任务流程测试/"+setP
 class MyTestCase(unittest.TestCase):
     u"""历史任务流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testHistoryTask(self):

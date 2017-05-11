@@ -14,7 +14,7 @@ from method56kongps import uploadPic
 class MyTestCase(unittest.TestCase):
     u"""从批量交接进入单个任务执行提货交接流程"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testHandover(self):

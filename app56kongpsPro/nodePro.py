@@ -16,7 +16,7 @@ shotPath = setParam56kongps.screenCapturePath + "执行定检流程测试/"+setP
 class MyTestCase(unittest.TestCase):
     u"""执行定检流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testNode(self):

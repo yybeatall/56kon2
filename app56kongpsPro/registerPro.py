@@ -17,7 +17,7 @@ shotPath = setParam56kongps.screenCapturePath + "注册/"+setParam56kongps.now
 class MyTestCase(unittest.TestCase):
     u"""注册流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam( self )
+        self.driver = setParam56kongps.setParam( self,"" )
 
     mobile = commonMethod.mobileNo("139")
     name = mobile[-4:]+"姓名"

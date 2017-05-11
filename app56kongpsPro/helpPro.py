@@ -34,7 +34,7 @@ class MyTestCase(unittest.TestCase):
 
 
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def tearDown(self):

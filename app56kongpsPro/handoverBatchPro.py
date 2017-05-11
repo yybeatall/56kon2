@@ -12,7 +12,7 @@ from method56kongps import pickupDelivery
 class MyTestCase(unittest.TestCase):
     u"""首页执行批量交接流程测试"""
     def setUp(self):
-        self.driver = setParam56kongps.setParam(self)
+        self.driver = setParam56kongps.setParam(self,"")
 
 
     def testHandoverBatch(self):
