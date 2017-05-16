@@ -72,10 +72,10 @@ mysuite = unittest.TestSuite([loginCases,
 '''批量提到货（交接按钮）-单个提货（交接按钮）-单个到货（交接按钮）-
 批量提货（首页待提）-批量到货（首页待到）'''
 mysuite2 = unittest.TestSuite([handoverBatchCases,
-                              handoverPickupCases,
-                              handoverDeliveryProCases,
-                              PickupBatchCases,
-                              DeliveryBatchCases])
+                               handoverPickupCases,
+                               handoverDeliveryProCases,
+                               PickupBatchCases,
+                               DeliveryBatchCases])
 
 '''3.登录注册等'''
 '''注册-注销-登录'''
@@ -96,5 +96,5 @@ with open('report/'+now+'HTML56kongpsReport.html', 'wb') as f:
                               verbosity=2
                                 )
     #unittest.TextTestRunner(verbosity=2)
-    myrunner.run(mysuite3)
+    myrunner.run(mysuite2)
     f.close()

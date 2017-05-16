@@ -20,10 +20,10 @@ def setParam(self,automationName):
     desired_caps['appActivity'] = '.ui.activity.MainActivity'
     desired_caps["unicodeKeyboard"] = "True"
     desired_caps["resetKeyboard"] = "True"
+    desired_caps["noReset"] = "True"
     if automationName == "S":
         desired_caps["automationName"] = "Selendroid"
         #desired_caps["autoWebview"] = "true"
-        desired_caps["noReset"] = "true"
         desired_caps["app"] = "C:\\Users\YUY\Desktop\share\kongps_3.5.8_android.apk"
     self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return self.driver
